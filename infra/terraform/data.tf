@@ -27,8 +27,8 @@ resource "aws_db_instance" "main" {
   publicly_accessible    = false
   storage_encrypted      = true
   backup_retention_period = 7
-  skip_final_snapshot    = true
-  deletion_protection    = false
+  skip_final_snapshot     = true
+  deletion_protection     = false
 
   tags = merge(local.common_tags, {
     Name = "${local.name_prefix}-db"

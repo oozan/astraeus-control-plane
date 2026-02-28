@@ -40,7 +40,7 @@ resource "aws_subnet" "public" {
   map_public_ip_on_launch = true
 
   tags = merge(local.common_tags, {
-    Name = "${local.name_prefix}-public-${replace(each.key, var.aws_region, "")}" 
+    Name = "${local.name_prefix}-public-${replace(each.key, var.aws_region, "")}"
     Tier = "public"
   })
 }
@@ -53,7 +53,7 @@ resource "aws_subnet" "private" {
   cidr_block        = each.value.private_cidr
 
   tags = merge(local.common_tags, {
-    Name = "${local.name_prefix}-private-${replace(each.key, var.aws_region, "")}" 
+    Name = "${local.name_prefix}-private-${replace(each.key, var.aws_region, "")}"
     Tier = "private"
   })
 }
