@@ -1,0 +1,7 @@
+project_name      = "astraeus-control-plane"
+environment       = "dev"
+aws_region        = "eu-north-1"
+alert_email       = "you@example.com"
+monthly_budget_usd = "30"
+api_image_tag     = "latest"
+worker_image_tag  = "latest"
